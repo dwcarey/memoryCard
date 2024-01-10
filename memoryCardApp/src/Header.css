@@ -1,8 +1,23 @@
 .headerContainer {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 0;
 }
 
 .titleContainer {
-    margin-right: 30vw;
+    margin-right: 5%;
+}
+
+.scoreContainer {
+    width: 45%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+h2 {
+    font: 1.5rem;
+    margin: 1rem;
 }

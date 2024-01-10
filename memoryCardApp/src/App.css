@@ -16,7 +16,7 @@ h3 {
     text-align: center;
     margin-top: 1.5vh;
     margin-bottom: 1vh;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 li {
@@ -27,8 +27,12 @@ li {
     background-color: rgb(117, 141, 185);
 }
 
+li:hover {
+    background-color: rgb(81, 137, 243);
+}
+
 .cardsList {
-    width: 18%;
+    width:11%;
 }
 
 img {
@@ -37,5 +41,5 @@ img {
 
 .section {
     padding: 5vw;
-    padding-top: 2vh;
+    padding-top: 0vh;
 }
