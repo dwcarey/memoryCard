@@ -16,7 +16,7 @@ h3 {
     text-align: center;
     margin-top: 1.5vh;
     margin-bottom: 1vh;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 li {
@@ -42,4 +42,5 @@ img {
 .section {
     padding: 5vw;
     padding-top: 0vh;
+    padding-bottom: 0;
 }
