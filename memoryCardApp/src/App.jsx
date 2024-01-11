@@ -94,7 +94,9 @@ function App({ updateScores }) {
       setClickedCards([]);
       setLastClickedCardName(card.cardName);
       setLastClickedCardImageURL(card.imageURL);
-      setDisplayGameOverPopup(true);
+  
+      // Set a flag to indicate game over due to losing
+      setDisplayGameOverPopup('lost');
     } else {
       setLastClickedCardName(card.cardName);
       setLastClickedCardImageURL(card.imageURL);
@@ -103,7 +105,7 @@ function App({ updateScores }) {
       // Increment current score
       if (clickedCards.length === 11) {
         // If only one card is left to click, set the displayGameOverPopup flag
-        setDisplayGameOverPopup(true);
+        setDisplayGameOverPopup('won');
       }
       setCurrentScore((prevScore) => {
         const newScore = prevScore + 1;
@@ -132,12 +134,13 @@ function App({ updateScores }) {
         </div>
       </div>
       {showGameOverPopup && (
-        <GameOverPopup
-          resetGame={resetGame}
-          lastClickedCardName={lastClickedCardName}
-          lastClickedCardImageURL={lastClickedCardImageURL}
-        />
-      )}
+      <GameOverPopup
+        resetGame={resetGame}
+        lastClickedCardName={lastClickedCardName}
+        lastClickedCardImageURL={lastClickedCardImageURL}
+        result={displayGameOverPopup} 
+      />
+    )}
     </>
   );
 }
